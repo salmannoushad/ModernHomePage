@@ -1,0 +1,458 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Gugi&family=Lato&family=Roboto&family=Sofia&display=swap');
+
+:root {
+    --primary-color: #45ccb8;
+    --light-gray: #2b3032a1;
+    --border: #2b303218;
+    --text-color: #ff686b;
+    --roboto: "Roboto", Sans-serif;
+    --gugi: "Gugi", cursive;
+    --sofia: "Sofia", cursive;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ececec;
+
+}
+
+.another {
+    height: 100vh;
+    background: yellow;
+}
+
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .nav {
+        margin-left: 20%;
+        top: 10%;
+    }
+
+    .menu-btn {
+        background: #fff !important;
+        /* margin-left: 5px !important; */
+        margin-top: 14px !important;
+
+    }
+
+    .close-menu {
+        position: fixed;
+
+        margin-top: 14px !important;
+    }
+
+    .svgs {
+        position: absolute;
+        top: 25% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 300px;
+
+
+    }
+
+
+
+    .heroP {
+        width: 90%;
+        text-align: justify;
+        margin: 10px 0 auto;
+    }
+
+    .cvbutton {
+        position: absolute;
+        top: 85% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .hero-section button:before {
+        display: none !important;
+    }
+
+    .hero-section button:after {
+        display: none !important;
+    }
+
+}
+
+
+/* // Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    .nav {
+        margin-top: 20%;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .iconbox li i {
+        font-size: 3px;
+    }
+
+    .heroP {
+        width: 90%;
+        text-align: justify;
+        margin: 10px 0 auto;
+    }
+
+    .cvbutton {
+        position: absolute;
+        top: 85% !important;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .mediaup {
+        position: absolute;
+        left: 50% !important;
+        margin-top: 20px;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+
+    }
+
+    /* .iconbox {
+        margin-left: -40px !important;
+    } */
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    ...
+}
+
+/* // Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    ...
+}
+
+
+/* hero section */
+.hero-section {
+    width: 100%;
+    height: 100vh;
+}
+
+.svgs {
+    position: absolute;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+
+}
+
+.st0 {
+    stroke: #121212;
+    fill: black;
+    stroke-dasharray: 1800;
+    opacity: 10;
+    animation: animate 2s cubic-bezier(0, 0.23, 1, .1);
+}
+
+
+
+@keyframes animate {
+    0% {
+        opacity: 0;
+        fill: none;
+        stroke-dasharray: 1800;
+    }
+
+    30% {
+        opacity: 10;
+        fill: none;
+        stroke-dasharray: 1200;
+    }
+
+    90% {
+        fill: #121212;
+    }
+
+    100% {
+        opacity: 10;
+        fill: #121212;
+        stroke-dasharray: 0;
+    }
+}
+
+.hero-section p {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: justify;
+
+}
+
+.cvbutton {
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-section button {
+    background: none;
+    color: #121212;
+    width: 180px;
+    height: 50px;
+    border: 1px solid #338033;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: .6s;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+.hero-section button:focus {
+    outline: none;
+}
+
+.hero-section button:before {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .5);
+    width: 60px;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+.hero-section button:after {
+    content: '';
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, .2);
+    width: 30px;
+    height: 100%;
+    left: 30px;
+    top: 0;
+    opacity: .5s;
+    filter: blur(30px);
+    transform: translate(-100px) skewX(-15deg);
+}
+
+.hero-section button:hover {
+    background: #338033;
+    cursor: pointer;
+    color: white;
+}
+
+.hero-section button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+.hero-section button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+
+.menu-btn {
+    position: fixed;
+    margin: 1em;
+    font-size: 24px;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    padding: 14px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, .1),
+        -4px -4px 6px #fff;
+    border-radius: 50%;
+
+}
+
+
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: #121212;
+    opacity: 0;
+}
+
+
+
+.close-menu {
+    position: fixed;
+    margin: 1em;
+    font-size: 24px;
+    color: #fff;
+    z-index: 1;
+    cursor: pointer;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    padding: 14px;
+}
+
+.mediaup {
+    position: absolute;
+    left: 87%;
+    margin-top: 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+
+
+
+}
+
+.mediaup ul {
+    list-style: none;
+    position: fixed;
+}
+
+.mediaup ul li {
+
+    font-family: var(--gugi);
+    transition: color .2s ease-out, transorm .2s ease-out;
+    color: #696969;
+    display: inline-block;
+    padding: 6px;
+    margin: 0 3px;
+    border: 2px solid rgba(255, 255, 255, .3);
+    box-shadow: 4px 4px 6px 0 rgba(0, 0, 0, .1),
+        -4px -4px 6px #fff;
+    border-radius: 50%;
+}
+
+.iconbox li i {
+    font-size: 30px;
+}
+
+.mediaup ul li:hover {
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1),
+        -4px -4px 10px #fff;
+}
+
+.mediaup ul li:focus {
+    outline: none;
+    box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, .1),
+        -4px -4px 10px #fff,
+        4px 4px 10px 0 rgba(0, 0, 0, .1) inset,
+        -4px -4px 10px #fff inset;
+}
+
+
+.buttonups:hover,
+.buttonups:focus {
+    color: #338033;
+}
+
+.buttonups {
+
+    color: #696969;
+
+}
+
+.nav {
+    position: absolute;
+    left: 21%;
+    margin-top: 8%;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.main-menu-item {
+    padding-top: 30px;
+}
+
+.main-menu-item a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: lighter;
+}
+
+.submenu-item a {
+    color: grey;
+}
+
+.submenu li {
+    margin-left: 25px;
+}
+
+.subicon {
+    position: relative;
+    font-size: 9px;
+    opacity: .4;
+}
+
+.submenu {
+    display: none;
+}
+
+.contact {
+    color: #fff;
+    position: absolute;
+    bottom: 70px;
+    right: 24%;
+}
+
+.contact p {
+    font-weight: lighter;
+    color: grey;
+}
+
+
+.media {
+    position: absolute;
+    bottom: 70px;
+    left: 22%;
+}
+
+.media ul {
+    list-style: none;
+}
+
+.media ul li {
+    display: inline-block;
+
+    padding-right: 16px;
+}
+
+.media ul li a {
+    text-decoration: none;
+    color: grey;
+    font-weight: lighter;
+}
